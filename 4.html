@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        const styleBox = {
+            color: 'red',
+            fontSize: '25px',
+        }
+
+        function Box ()  {
+           return (
+            <>
+                <h1 className='text'>Урок 1</h1>
+                <span style={styleBox}>Задание 4</span>
+                <input></input>
+            </>
+           ) 
+        }
+             ReactDOM.render(<Box/>,root)
+    </script>
+</body>
+<style>
+    .show {
+        display: block;
+    }
+</style>
+
+
+</html>
