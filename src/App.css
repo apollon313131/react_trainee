@@ -46,3 +46,22 @@
 .feedback button {
     margin-bottom: 15px;
 }
+
+.formInput {
+    border: 1px solid yellowgreen;
+    margin: 15px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formInput input {
+    width: 30%;
+    margin-bottom: 5px;
+}
+
+.formInput button {
+    width: 10%;
+    margin: 3px;
+}

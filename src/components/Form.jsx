@@ -16,7 +16,7 @@ class Form extends React.Component {
     handleChange(e) {
         this.setState({toggleButton: false})
         let value = e.target.value;
-        if (value === 'реакт') {
+        if (value === 'реакт' || value === 'react') {
             this.setState({toggleButton: true},()=>console.log(this.state.toggleButton))
         };
     };
@@ -24,7 +24,7 @@ class Form extends React.Component {
     handleClick(e) {
         e.preventDefault()
         this.myRef.current.focus();  
-        this.setState({initialValueFeedback : 1}) 
+        this.setState({initialValueFeedback : 'Обновил'}) 
     };
 
     componentDidMount(){
@@ -35,12 +35,18 @@ class Form extends React.Component {
         console.log('componentDidUpdate');
         console.log(prevState);
     };
-    
+
+    componentWillUnmount(){
+        console.log('componentWillUnmount');
+    };
+
+
     render() {
       return (
         <div>
-            <div>
-                <input type="text" onChange={(e)=>this.handleChange(e)} ref={this.myRef} />
+            <div className='formInput'>
+                <h1>Основы React</h1>
+                <input type="text" onChange={(e)=>this.handleChange(e)} ref={this.myRef} placeholder='Введите слово реакт или react'/>
                 <button disabled={this.state.toggleButton}>Click</button>
                 <button onClick={(e)=>this.handleClick(e)}>Focus</button>
             </div>

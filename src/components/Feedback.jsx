@@ -6,7 +6,6 @@ class Feedback extends React.PureComponent {
         this.state={}
     };
     
-
     componentDidUpdate(prevProps, prevState, snapshot) {
         console.log('Обновился');
     };
