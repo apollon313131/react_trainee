@@ -21,7 +21,7 @@ class Mouse extends React.Component {
 
           <p>Текущая позиция мыши: ({this.state.x}, {this.state.y})</p>
           {this.props.render(this.state)}
-          {console.log(this.state)}
+          {/* {console.log(this.state)} */}
           {/* <Cat mouse={this.state} /> */}
         </div>
         );

@@ -17,14 +17,8 @@ class MouseWithCat extends React.Component {
   
     render() {
       return (
-        <div style={{ height: '2000px' }} onMouseMove={this.handleMouseMove}>
+        <div style={{ height: '150px' }} onMouseMove={this.handleMouseMove}>
             <span>fff</span>
-          {/*
-            Здесь мы без труда можем поменять тег <p> на <Cat>... но тогда
-            нам придется создавать отдельный компонент <MouseСЧемТоЕще>
-            каждый раз, когда он нам будет необходим, поэтому <MouseWithCat>
-            в действительности не является повторно используемым.
-          */}
           <Cat mouse={this.state} />
           </div>
           );

@@ -11,9 +11,9 @@ import Calculate from './components/Calculate/Calculate';
 function App() {
   return ( 
     <div className='bodyClass'>
-      {/* <Body/>
-      <MouseTracker/> */}
-      {/* <MouseWithCat/> */}
+      <Body/>
+      {/* <MouseTracker/>  */}
+      <MouseWithCat/>
       <Calculate/>
 
     </div>
