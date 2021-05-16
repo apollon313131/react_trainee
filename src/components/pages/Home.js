@@ -1,19 +1,12 @@
 
-import './App.css';
-import Navbar from './components/NavBar/NavBar';
-import { Route, NavLink } from "react-router-dom";
-import About from './components/pages/About';
-import Contact from './components/pages/Contact'
-import Counter from './components/pages/Counter';
-import Home from './components/pages/Home';
-import Modal from './components/Modal/Modal';
-import Context from './components/Context/context';
+import TodoList from '../ToDo/TodoList';
 import { useState, useEffect, useCallback } from 'react';
+import Context from '../Context/context';
+import AddTodo from '../ToDo/AddTodo';
+import Loader from '../Loader/Loader';
 
 
-
-
-function App() {
+function Home() {
 
   const arrToDo = [
     { id: 1, completed: false, title: 'Задача №1' },
@@ -24,6 +17,7 @@ function App() {
   ]
 
   const [todos, setTodos] = useState([])
+
   const [loading, setLoading] = useState(true)
 
   //Получить список задач
@@ -58,46 +52,18 @@ function App() {
 
   return (
     <Context.Provider value={{ removeTodo }}>
-      <div className="App">
         <div className="wrapper">
-
-          <h1>ToDo-List</h1>
-
-          <Navbar/>
-
-          <Modal />
-   
-          <Route path="/about" exact component={About} />
-          <Route path="/coordinate" exact component={Contact} />
-          <Route path="/counter" exact component={Counter} />
-          <Route path="/" exact component={Home} />
-
-          {/* <TestHooks/> */}
-          {/* <AddTodo onCreate={addTodo} loading todos={todos}  onToggle={toggleTodo}/>
+          <h3>Добавить</h3>
+          <AddTodo onCreate={addTodo} loading todos={todos}  onToggle={toggleTodo}/>
 
           {loading ? <Loader /> : null}
 
           {todos.length ? <TodoList todos={todos}
           onToggle={toggleTodo}/> :
-          loading ? null : <p>Нет записей</p>}           */}
+          loading ? null : <p>Нет записей</p>}          
         </div>
-      </div>
     </Context.Provider>
   );
 }
 
-export default App;
-
-
-// function App() {
-//   return ( 
-//     <div className='bodyClass'>
-//       <Body/>
-//       {/* <MouseTracker/>  */}
-//       <MouseWithCat/>
-//       <Calculate/>
-
-//     </div>
-//   );
-// }
-
+export default Home;
