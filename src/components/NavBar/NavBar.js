@@ -17,7 +17,7 @@ export default class Navbar extends React.Component {
                 <NavLink to="/">Главная</NavLink>
               </li>
               <li>
-                <NavLink to="/hooks">Немного о хуках</NavLink>
+                <NavLink to="/about">Немного о хуках</NavLink>
               </li>
               <li>
                 <NavLink to="/coordinate">Координаты мышки</NavLink>

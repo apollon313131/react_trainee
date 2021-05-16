@@ -1,4 +1,3 @@
-
 import './App.css';
 import Navbar from './components/NavBar/NavBar';
 import { Route, NavLink } from "react-router-dom";
@@ -9,9 +8,6 @@ import Home from './components/pages/Home';
 import Modal from './components/Modal/Modal';
 import Context from './components/Context/context';
 import { useState, useEffect, useCallback } from 'react';
-
-
-
 
 function App() {
 
@@ -71,15 +67,8 @@ function App() {
           <Route path="/coordinate" exact component={Contact} />
           <Route path="/counter" exact component={Counter} />
           <Route path="/" exact component={Home} />
-
           {/* <TestHooks/> */}
-          {/* <AddTodo onCreate={addTodo} loading todos={todos}  onToggle={toggleTodo}/>
-
-          {loading ? <Loader /> : null}
-
-          {todos.length ? <TodoList todos={todos}
-          onToggle={toggleTodo}/> :
-          loading ? null : <p>Нет записей</p>}           */}
+           
         </div>
       </div>
     </Context.Provider>
@@ -87,17 +76,4 @@ function App() {
 }
 
 export default App;
-
-
-// function App() {
-//   return ( 
-//     <div className='bodyClass'>
-//       <Body/>
-//       {/* <MouseTracker/>  */}
-//       <MouseWithCat/>
-//       <Calculate/>
-
-//     </div>
-//   );
-// }
 
